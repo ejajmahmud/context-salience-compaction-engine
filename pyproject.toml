@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "context-salience-compaction-engine"
+version = "0.1.0"
+description = "Compresses conversation history and retrieved passages based on token salience and attention weights without losing critical reasoning facts"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+context-salience-compaction-engine = "context_salience_compaction_engine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["context_salience_compaction_engine*"]
